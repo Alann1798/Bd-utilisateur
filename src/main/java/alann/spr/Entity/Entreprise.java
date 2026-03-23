@@ -20,8 +20,5 @@ public class Entreprise {
     @OneToMany(mappedBy = "entreprise")
     private List<User> users;
 
-    // 🔥 OneToOne avec Billing
-    @OneToOne
-    private Billing billing;
 
 }

@@ -20,7 +20,7 @@ public class User {
     // USER
 
     // 🔥 One User → Many Roles
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "role_id")
     private List<Role> role;
 
