@@ -17,7 +17,7 @@ public class Entreprise {
     private String local;
 
     // 🔥 One Entreprise → Many Users
-    @OneToMany(mappedBy = "entreprise")
+   @OneToMany(mappedBy = "entreprise")
     private List<User> users;
 
 

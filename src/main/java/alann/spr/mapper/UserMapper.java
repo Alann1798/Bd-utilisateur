@@ -24,7 +24,7 @@ public User toEntity(RequestDtoUser dto, Role role, Entreprise entreprise) {
     user.setNom(dto.getNom());
     user.setEmail(dto.getEmail());
     user.setPassword(dto.getPassword());
-    user.setRole(Arrays.asList(role));
+    user.setRole(role);
     user.setEntreprise(entreprise);
     return user;
 }
@@ -34,7 +34,7 @@ public User toEntity(RequestDtoUser dto, Role role, Entreprise entreprise) {
         dto.setId(user.getId());
         dto.setNom(user.getNom());
         dto.setEmail(user.getEmail());
-        dto.setRoleNom(user.getRole().get(0).getNom());
+        dto.setRoleNom(user.getRole().getNom());
         dto.setEntrepriseNom(user.getEntreprise().getNom());
         return dto;
     }

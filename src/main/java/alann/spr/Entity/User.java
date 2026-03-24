@@ -22,7 +22,7 @@ public class User {
     // 🔥 One User → Many Roles
     @ManyToOne
     @JoinColumn(name = "role_id")
-    private List<Role> role;
+    private Role role;
 
     @ManyToOne
     @JoinColumn(name = "entreprise_id")

@@ -77,7 +77,7 @@ public class UserService {
         user.setNom(dto.getNom());
         user.setEmail(dto.getEmail());
         user.setPassword(dto.getPassword());
-        user.setRole(Arrays.asList(role));
+        user.setRole(role);
         user.setEntreprise(entreprise);
 
         return mapper.toDto(userRepository.save(user));
