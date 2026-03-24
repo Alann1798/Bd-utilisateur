@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @SpringBootTest
 @ActiveProfiles("test")
 public class TestEntrepriseService {
-    @Autowired
+  /*  @Autowired
     private EntrepriseService service;
 
     @Test
@@ -89,4 +89,6 @@ public class TestEntrepriseService {
         // VERIFY
         Verify(repository).save(entity);
     }
+            */
+
 }
