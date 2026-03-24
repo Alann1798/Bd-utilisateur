@@ -10,6 +10,7 @@ import alann.spr.Entity.Role;
 import alann.spr.Entity.User;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collector;
@@ -23,7 +24,7 @@ public User toEntity(RequestDtoUser dto, Role role, Entreprise entreprise) {
     user.setNom(dto.getNom());
     user.setEmail(dto.getEmail());
     user.setPassword(dto.getPassword());
-    user.setRole(List.of(role));
+    user.setRole(Arrays.asList(role));
     user.setEntreprise(entreprise);
     return user;
 }
@@ -33,7 +34,7 @@ public User toEntity(RequestDtoUser dto, Role role, Entreprise entreprise) {
         dto.setId(user.getId());
         dto.setNom(user.getNom());
         dto.setEmail(user.getEmail());
-        dto.setRoleNom(user.getRole().getFirst().getNom());
+        dto.setRoleNom(user.getRole().get(0).getNom());
         dto.setEntrepriseNom(user.getEntreprise().getNom());
         return dto;
     }

@@ -17,7 +17,9 @@ import org.springframework.expression.AccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -57,25 +59,25 @@ public class UserService {
         return userRepository.findAll()
                 .stream()
                 .map(mapper::toDto)
-                .toList();
+                .collect(Collectors.toList());
     }
 
     //lire par ID
     public ReponseDtoUser getById(Long id) {
-        return mapper.toDto(userRepository.findById(id).orElseThrow());
+        return mapper.toDto(userRepository.findById(id).orElseThrow(()->new RuntimeException("utilisateur non trouver")));
     }
     //modifier
 
     public ReponseDtoUser update(Long id, RequestDtoUser dto) {
-        User user = userRepository.findById(id).orElseThrow();
+        User user = userRepository.findById(id).orElseThrow(()->new RuntimeException("utilisateur non trouver"));
 
-        Role role = roleRepository.findById(dto.getRoleId()).orElseThrow();
-        Entreprise entreprise = entrepriseRepository.findById(dto.getEntrepriseId()).orElseThrow();
+        Role role = roleRepository.findById(dto.getRoleId()).orElseThrow(()->new RuntimeException("utilisateur non trouver"));
+        Entreprise entreprise = entrepriseRepository.findById(dto.getEntrepriseId()).orElseThrow(()->new RuntimeException("utilisateur non trouver"));
 
         user.setNom(dto.getNom());
         user.setEmail(dto.getEmail());
         user.setPassword(dto.getPassword());
-        user.setRole(List.of(role));
+        user.setRole(Arrays.asList(role));
         user.setEntreprise(entreprise);
 
         return mapper.toDto(userRepository.save(user));

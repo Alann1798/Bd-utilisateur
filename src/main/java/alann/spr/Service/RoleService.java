@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class RoleService {
@@ -30,7 +31,7 @@ public class RoleService {
         return repository.findAll()
                 .stream()
                 .map(role -> mapper.toDto(role))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // READ ONE

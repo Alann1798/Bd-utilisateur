@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class BillingService {
@@ -47,7 +48,7 @@ public class BillingService {
         return repository.findAll()
                 .stream()
                 .map(Bill -> mapper.toDto(Bill))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // READ ONE

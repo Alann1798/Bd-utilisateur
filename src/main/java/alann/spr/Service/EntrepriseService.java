@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class EntrepriseService {
 
@@ -29,7 +31,7 @@ public class EntrepriseService {
         return repository.findAll()
                 .stream()
                 .map(entreprise -> mapper.toDto(entreprise))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // READ ONE

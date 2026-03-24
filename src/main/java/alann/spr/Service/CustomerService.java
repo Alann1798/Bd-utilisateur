@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 
@@ -40,7 +41,7 @@ public class CustomerService {
         return repository.findAll()
                 .stream()
                 .map(CustomerMapper::toDto)
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // READ BY ID
