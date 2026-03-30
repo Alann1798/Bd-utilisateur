@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="672c37fa-56de-4e3e-947a-b98930aa236b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/Dto/ReponseUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/Dto/RequestUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/Entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/Mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boris/boris/src/main/java/inaf/boris/controller/UserController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3AsKoUgSlqvY40Y7d9PeZZNjuuy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="672c37fa-56de-4e3e-947a-b98930aa236b" name="Changes" comment="" />
+      <created>1773376012822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773376012822</updated>
+    </task>
+    <servers />
+  </component>
+</project>
