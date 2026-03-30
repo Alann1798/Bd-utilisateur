@@ -45,10 +45,12 @@ public class UserController {
     public ReponseUserDto updateUser(@PathVariable("id") Long id, @RequestBody RequestUserDto dto){
         return Service.updateUser(id,dto);
     }
+
     @DeleteMapping("/{id}")
     public void supprimerUser(@PathVariable("id") Long id){
         Service.deleteUser(id);
     }
+
 
 
 }
