@@ -85,9 +85,10 @@ public class UserService {
 
     //supprimer
     public void delete(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new DeleteException("Impossible de supprimer : utilisateur avec l'id " + id + " introuvable"));
         userRepository.deleteById(id);
     }
-
 
     //exception serveur
     public String createUser() {
